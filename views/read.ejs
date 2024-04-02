@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Information Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h3>Read Operation</h3>
+
+
+   <%   rows.map((eachdata)=>{ %>
+      
+      <div class="form-container">
+        <form>
+          <div class="form-group">
+            <label for="name"> <%- eachdata.name %></label>
+            
+          </div>
+          <div class="form-group">
+            <label for="email"><%- eachdata.email %></label>
+           
+          </div>
+          <div class="form-group">
+            <label for="age"> <%- eachdata.age %></label>
+            
+          </div>
+          <div class="form-group">
+            <label for="mobile"> <%- eachdata.mobile %></label>
+           
+          </div>
+          <div class="form-group">
+            <label for="work"> <%- eachdata.work %></label>
+            
+          </div>
+          <div class="form-group">
+            <label for="address"> <%- eachdata.address %></label>
+            
+          </div>
+          <div class="form-group">
+            <label for="about"> <%- eachdata.about %></label>
+            
+          </div>
+          <div class="a-container">
+            <a href="/update-read?id=<%- eachdata.id %>">Update</a>
+            <a href="/delete-read?id=<%- eachdata.id %>">Delete</a>
+            
+            
+          </div>
+        </form>
+      </div>
+
+    <% }) %>
+
+
+   
+  </div>
+</body>
+</html>
